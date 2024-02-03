@@ -29,4 +29,8 @@ export class SwitchesComponent implements OnInit {
     })
   }
 
+  guardar(){
+
+  }
+
 }
