@@ -1,0 +1,5 @@
+{
+    "javascript.referencesCodeLens.enabled": true,
+    "javascript.format.enable": true,
+    "debug.javascript.automaticallyTunnelRemoteServer": true
+}

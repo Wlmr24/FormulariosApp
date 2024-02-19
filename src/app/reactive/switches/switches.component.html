@@ -1,7 +1,8 @@
-<h1>Template: <small>Switches</small></h1>
+<h1>Reactive: <small>Switches</small></h1>
 <hr>
 
-<form [formGroup]="miFormulario">
+<form [formGroup]="miFormulario"
+      (ngSubmit)="guardar()">
     <!-- Radios -->
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label ">Genero</label>
@@ -75,7 +76,8 @@
 
     <div class="row">
       <div class="col">
-        <button class="btn btn-primary float-end">
+        <button class="btn btn-primary float-end"
+                type="submit">
           Guardar
         </button>
       </div>

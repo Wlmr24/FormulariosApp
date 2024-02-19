@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonEngine } from '@angular/ssr';
 
 @Component({
   selector: 'app-switches:not(p)',
@@ -27,9 +28,19 @@ export class SwitchesComponent implements OnInit {
     ...this.persona,
     condiciones: false
     })
+
+    this.miFormulario.valueChanges.subscribe(form => {
+      delete form.condiciones
+      this.persona = form
+    } )
   }
 
   guardar(){
+
+    const formValue = {...this.miFormulario.value}
+    delete formValue.condiciones
+
+    this.persona = formValue
 
   }
 
